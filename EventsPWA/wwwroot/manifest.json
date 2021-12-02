@@ -1,0 +1,15 @@
+{
+  "name": "DipenPrajapati",
+  "short_name": "DipenPrajapati",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#D0CFCF",
+  "theme_color": "#8B8989",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

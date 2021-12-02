@@ -1,0 +1,42 @@
+<h2>@headerline</h2>
+
+<div>
+    <label>User Name</label>
+    <input type="text" name="username" @bind="user">
+</div>
+<div>
+    <label>Password</label>
+    <input type="@myfunc()" name="password"  @bind="pass">
+</div>
+<button type="submit" @onclick="OnLoginCallback">LOGIN</button>
+
+
+@code{
+    [Parameter]
+    public bool PasswordVisible{get;set;}
+    public string headerline ;
+    public string user;
+    public string pass;
+    public void OnLoginCallback(){
+        if(user == "test"){
+            if(pass == "test"){
+                PasswordVisible = false;
+                headerline = "Login Success";
+            }
+        }else{
+            
+            headerline ="Login credential is false.";
+        }
+        
+        
+    }
+    public string myfunc(){
+        if(PasswordVisible){
+            return "text";
+        }else{
+            return "password";
+        }
+    }
+    
+
+}
